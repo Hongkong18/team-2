@@ -4,7 +4,7 @@
 
 This is the README.md file of team-2  Please go through it before you start.
 - [x] testing
-- []  cloning
+- [ ] cloning
 
 ```python
 import numpy as np
