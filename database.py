@@ -12,7 +12,7 @@ class dbhelper:
 	def setup():
 		if(not dbhelper._client):
 			dbhelper._client=MongoClient('localhost',27017)
-			dbhelper._db=dbhelper._client["main_database"]
+			dbhelper._db=dbhelper._client["main_db"]
 	
 	def insert_many(docs,coll_name):
 		try:
