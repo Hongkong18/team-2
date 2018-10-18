@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en"> 
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <!-- <link rel="stylesheet" href="css/main.css"> -->
+
+        <style>
+        *, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+}
+
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 700px) {
+
+  form {
+    max-width: 600px;
+  }
+
+}
+        </style>
+    </head>
+    <body>
+      <img src="navbar.jpg" width=100%/>
+
+      <div style="background-color: #ed7326;">
+        <br>
+        <br>
+        <br>
+
+      <form action="index.html" method="post">
+      
+        <h1>Sign Up</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Your basic info</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="mail">
+
+          <label for="mail">Retype Email:</label>
+          <input type="email" id="mail2" name="mail2">
+          
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone">
+          
+<!--       <label>Age:</label>
+          <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
+          <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label> -->
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="number">2</span>Your Availability</legend>
+        <label for="availability">Available Hours Per Week:</label>
+          <input type="number" id="availability" name="availability">
+
+        <label for="start">When can you start?</label>
+          <input type="date" id="start" name="start"
+               value="2018-07-22" />
+        </fieldset>
+        
+        <fieldset>
+          <legend><span class="number">3</span>Your Skills and Interest</legend>
+
+        <label for="job">Volunteer Type:</label>
+        <select id="volunteerType" name="volunteerType" onchange="toggle()">
+            <option value="">Please select a volunteer type</option>
+            <option value="short">Help in one event only</option>
+            <option value="long">Help in more than one event</option>
+        </select>
+        </fieldset>
+
+
+        <div id="shortDiv">     
+        </div>
+
+          <div>
+            <div id="longDiv" style="display:none;">
+              <label for="bio">Resume/CV:</label>
+              <textarea id="bio" name="user_bio"></textarea>
+          </div>
+
+            <fieldset>
+              <label>Interested in:</label>
+              <input type="checkbox" id="" value="Translation" name="user_interest"><label class="light">Translation (Chinese and English)</label><br>
+                <input type="checkbox" id="" value="Fundraising" name="user_interest"><label class="light">Fundraising</label><br>
+              <input type="checkbox" id="" value="Graphic Design" name="user_interest"><label class="light">Graphic Design</label><br>
+              <input type="checkbox" id="" value="Web Design" name="user_interest"><label class="light">Web Design</label><br>
+                <input type="checkbox" id="" value="Editorial" name="user_interest"><label class="light">Editorial</label><br>
+              <input type="checkbox" id="" value="Admin" name="user_interest"><label class="light">Admin</label><br>
+                <input type="checkbox" id="" value="Events" name="user_interest"><label class="light">Events</label><br>
+              <input type="checkbox" id="" value="PR / Marketing / Social Media" name="user_interest"><label class="light">PR / Marketing / Social Media</label><br>
+              <input type="checkbox" id="" value="Sharing your story / lived experience" name="user_interest"><label class="light">Sharing your story / lived experience</label><br>
+                <input type="checkbox" id="" value="IT / Technology" name="user_interest"><label class="light">IT / Technology</label><br>
+              <input type="checkbox" id="" value="Other" name="user_interest"><label class="light">Other</label><br>
+            </fieldset>
+
+            <button type="submit">Sign Up</button>
+      </form>
+      <br>
+      <br>
+      <br>
+      </div>
+      </div>
+      <script>
+      function toggle() {
+          console.log("hi");
+          var x = document.getElementById("volunteerType");
+          var s = document.getElementById("shortDiv");
+          var l = document.getElementById("longDiv");
+
+          if (x.value === "short") {
+              s.style.display = "block";
+              l.style.display = "none";
+          } else {
+              s.style.display = "none";
+              l.style.display = "block";
+          }
+      }
+      </script>
+    </body>
+</html>
