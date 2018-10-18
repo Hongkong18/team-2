@@ -52,6 +52,10 @@ def staff():
 def volunteer():
 	return render_template('Volunteers.html')
 
+@app.route('/agenda')
+def agenda_calendar():
+	return render_template('calender/demos/agenda-views.html')
+
 
 @app.route('/dashboard_event/get_recommended_volunteer')
 def get_recommended_volunteer():
